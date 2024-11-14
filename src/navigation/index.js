@@ -1,35 +1,8 @@
-// This is For Teachers
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  TouchableOpacity,
-  BackHandler,
-} from "react-native";
-
-// navigation import
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from "@react-navigation/native";
+import BottomTabs from './BottomTabs'
 
 const Stack = createNativeStackNavigator();
-
-// Bottom Tabs
-import BottomTabs from './BottomTabs'
-import CreateClass from "../screens/teacher/CreateClass";
-import Sheet from "../screens/teacher/Sheet";
-import Report from "../screens/teacher/Report";
-import MarkAttendance from "../screens/student/MarkAttendance";
-
-
-
-function Home() {
-  return (
-    <View>
-      <Text>index</Text>
-    </View>
-  )
-}
 
 export default function AppNavigation() {
   return (
@@ -45,10 +18,6 @@ export default function AppNavigation() {
         initialRouteName={BottomTabs}
       >
         <Stack.Screen name="BottomTabs" component={BottomTabs} />
-        <Stack.Screen name="CreateClass" component={CreateClass} />
-        <Stack.Screen name="Sheet" component={Sheet} />
-        <Stack.Screen name="Report" component={Report} />
-        <Stack.Screen name="MarkAttendance" component={MarkAttendance} />
       </Stack.Navigator>
     </NavigationContainer>
 
